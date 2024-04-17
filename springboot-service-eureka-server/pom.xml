@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.microservice.eureka</groupId>
-	<artifactId>com.microservice.eureka</artifactId>
+	<artifactId>springboot-service-eureka-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot-service-eureka-server-1</name>
+	<name>springboot-service-eureka-server</name>
 	<description>demoo</description>
 	<properties>
 		<java.version>17</java.version>
@@ -21,6 +21,10 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
 		</dependency>
 
 		<dependency>
