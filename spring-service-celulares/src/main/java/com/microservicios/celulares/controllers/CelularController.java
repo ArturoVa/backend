@@ -1,12 +1,19 @@
 package com.microservicios.celulares.controllers;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-//import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.microservicios.celulares.entity.Celular;
 import com.microservicios.celulares.services.CelularService;
@@ -15,10 +22,15 @@ import com.microservicios.celulares.services.CelularService;
 public class CelularController {
     @Autowired
     private CelularService service;
-
+    @Value("${server.port}")
+    private Integer port;
+    
     @GetMapping("/list")
     public List<Celular> listar() {
-        return service.findAll();
+        return service.findAll().stream().map(cel -> {
+        	cel.setPort(port);
+        	return cel;
+        }).collect(Collectors.toList());
     }
 
     @GetMapping("/celular/{id}")

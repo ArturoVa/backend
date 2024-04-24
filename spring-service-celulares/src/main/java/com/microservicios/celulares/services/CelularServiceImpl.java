@@ -1,12 +1,12 @@
 package com.microservicios.celulares.services;
 
-import com.microservicios.celulares.entity.Celular;
-import com.microservicios.celulares.repository.CelularDao;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.microservicios.celulares.entity.Celular;
+import com.microservicios.celulares.repository.CelularDao;
 
 @Service
 public class CelularServiceImpl implements CelularService{

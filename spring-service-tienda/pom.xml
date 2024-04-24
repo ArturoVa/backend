@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.store.service</groupId>
-	<artifactId>spring-service-celulares-1</artifactId>
+	<artifactId>spring-service-store</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-service-store</name>
 	<description>Celulares service</description>
