@@ -31,7 +31,7 @@ public class Celular implements Serializable{
     private Date CreateAt;
     @Transient
     private Integer port; 
-    //create getters and setters for all the fields
+   
 
     public Integer getPort() {
 		return port;
