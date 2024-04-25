@@ -17,7 +17,10 @@ public class Celular {
 		this.port = port;
 	}
 
-	Celular() {
+	public Celular(Long id, String name, String marca) {
+		this.id= id;
+		this.nombre = name;
+		this.marca = marca;
     }
 
     public void setId(Long id) {
