@@ -35,9 +35,9 @@ public class CelularController {
 
     @GetMapping("/celular/{id}")
     public Celular detail(@PathVariable long id) {
-    	boolean b1 = false;
-    	if(!b1)
-    		throw new RuntimeException("No se pudo obtener el detalle del celular");
+//    	boolean b1 = false;
+//    	if(!b1)
+//    		throw new RuntimeException("No se pudo obtener el detalle del celular");
         return service.findById(id);
     }
 

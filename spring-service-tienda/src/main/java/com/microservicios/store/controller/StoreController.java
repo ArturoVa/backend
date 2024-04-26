@@ -24,7 +24,7 @@ public class StoreController {
         return storeService.findAll();
     }
     @HystrixCommand(fallbackMethod="metodoGenerico")
-    @GetMapping("/store/{id}/cantidad/{cantidad}")
+    @GetMapping("/celular/{id}/cantidad/{cantidad}")
     public Tienda details(@PathVariable Long id, @PathVariable Integer cantidad){
         return storeService.findById(id, cantidad);
     }
