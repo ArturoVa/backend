@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.microservicios.store.modelos.Celular;
 import com.microservicios.store.modelos.Tienda;
 import com.microservicios.store.service.StoreService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class StoreController {
     public List<Tienda> list(){
         return storeService.findAll();
     }
-    //@HystrixCommand(fallbackMethod="metodoGenerico")
+    @HystrixCommand(fallbackMethod="metodoGenerico")
     @GetMapping("/celular/{id}/cantidad/{cantidad}")
     public Tienda details(@PathVariable Long id, @PathVariable Integer cantidad){
         return storeService.findById(id, cantidad);
