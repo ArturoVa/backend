@@ -23,6 +23,7 @@ import com.microservicios.celulares.services.CelularService;
 public class CelularController {
     @Autowired
     private Environment env;
+    @Autowired
     private CelularService service;
     @Value("${server.port}")
     private Integer port;
