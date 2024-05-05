@@ -1,4 +1,4 @@
-package com.microservice.usuarios.entity;
+package com.microservice.commons.users.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
